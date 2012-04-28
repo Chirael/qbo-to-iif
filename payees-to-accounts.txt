@@ -1,0 +1,18 @@
+# These are mappings between payee names and the QuickBooks accounts
+# we want transactions using those payees to get filed under. It
+# assumes that the payee names have been corrected first per the
+# entries in the payee-fixes.txt file, making these mappings easier.
+Webster Bank	Bank Service Charges
+Home Depot	Repairs
+Lowes	Repairs
+Stop & Shop	Repairs
+National Grid	Utilities
+Narragansett Bay Commission	Utilities:Sewer
+National Tenant Network	Legal and Professional
+Pawtucket Water Supply Board	Utilities:Water
+Providence Water	Utilities:Water
+IPFS	Insurance
+Garrison Trust	Mortgage Interest
+Ferdie's Key Shop	Repairs
+Ocean State Job Lot	Repairs
+Blinds.com	Repairs

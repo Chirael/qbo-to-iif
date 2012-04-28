@@ -1,0 +1,22 @@
+# These are patterns for fixing complicated payee names in QBO files
+# to simpler ones for the IIF import files. The string to match is on
+# the left, then a tab, then on the right is the thing to replace it
+# with. The program forces the match string to be anchored at the
+# start of the payee.
+LOWE'S	Lowes
+NGRID	National Grid
+National Grid	National Grid
+USPS	USPS
+CRANSTON PAINT	Cranston Paint
+APPLIANCE PARTS PR	Appliance Parts Pro
+BLINDS.COM	Blinds.com
+Imperial PFS	IPFS
+NBC Sewer	Narragansett Bay Commission
+OCEAN STATE JOB	Ocean State Job Lot
+Quincy Mutual	Quincy Mutual
+NATIONAL TENANT	National Tenant Network
+Stop & Shop	Stop & Shop
+Ferdie's	Ferdie's Key Shop
+DURFEE TRUE VALUE	Durfee True Value
+DEPOSIT	Deposit
+PAID CHECK	Check

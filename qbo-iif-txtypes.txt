@@ -1,0 +1,11 @@
+# Maps transaction types from QBO TRNTYPE to IIF TRNSTYPE
+# Note that these are lower case because the ofxparse library
+# converts the TRNTYPE field contents to lowercase
+dep	DEPOSIT
+credit	DEPOSIT
+pos	CHECK
+check	CHECK
+payment	CHECK
+other	CHECK
+debit	CHECK
+fee	CHECK
