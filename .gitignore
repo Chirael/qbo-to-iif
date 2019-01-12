@@ -1,0 +1,4 @@
+# ignore all personal/transactional files
+*.qbo
+*.QBO
+*.iif
