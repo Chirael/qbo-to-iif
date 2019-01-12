@@ -1,9 +1,29 @@
-# These are patterns for fixing complicated payee names in QBO files
-# to simpler ones for the IIF import files. The string to match is on
-# the left, then a tab, then on the right is the thing to replace it
-# with. The program forces the match string to be anchored at the
-# start of the payee.
+# This file contains patterns for fixing complicated payee names in
+# QBO files to simpler ones for the IIF import files.
+#
+# The string to match is on the left, then a tab, then on the right is
+# the thing to replace it with. The program forces the match string to
+# be anchored at the START of the payee name.
+#
+# (Yes, CHECKCARD xxxx is stripped out when matching the payee name at
+# the start, so is PAYPAL *, SQ *, PP* and TST*)
+#
+# This may be necessary, for example, if different stores in the same
+# chain append their store number after the company name, such as "CVS
+# #123" and "CVS #456". Technically they are different stores, but
+# they're really all just one vendor (CVS); you might want to change
+# anything starting with CVS to just "CVS" so you don't end up with
+# many slightly different vendor names in Quickbooks
+#
+# To review all payee names in the QBO file, and see if any need to be
+# added here: egrep '<NAME>' name-of-qbo-file.QBO | sort | uniq
+#
+# Remember that after adding something here, you probably want to add
+# an account mapping in the payees-to-accounts.txt file too.
+#
+# Do NOT add PAYPAL, it will produce an error when importing into QB
 LOWE'S	Lowes
+ADLERS HARDWARE	Adler's Hardware
 NGRID	National Grid
 National Grid	National Grid
 USPS	USPS
@@ -17,6 +37,104 @@ Quincy Mutual	Quincy Mutual
 NATIONAL TENANT	National Tenant Network
 Stop & Shop	Stop & Shop
 Ferdie's	Ferdie's Key Shop
-DURFEE TRUE VALUE	Durfee True Value
+DURFEE	Durfee True Value
 DEPOSIT	Deposit
 PAID CHECK	Check
+THE HOME DEPOT	Home Depot
+PMNTUS	PmtUS
+ROTO-ROOTER	Roto Rooter
+DAL-TILE	Dal-Tile
+SERVICE CHARGE	Webster Bank
+WEBSTER BANK	Webster Bank
+WAL Wal-Mart	Wal-Mart
+Wal-Mart	Wal-Mart
+TJ MAXX	TJ Maxx
+CHASE CREDIT	Chase
+UREACH	UReach Technologies
+AMAZON	Amazon.com
+AMZN MKTP	Amazon.com
+LOCATEPLUS	LocatePlus
+OFFICE MA	OfficeMax
+T-MOBILE	TMobile
+CITY LOCK	City Lock
+CITY-PROVIDENCE	City of Providence
+WM EZPAY	Waste Management
+BENNY'S	Benny's
+HARLAND CLARKE	Harland Clarke
+CHELO'S	Chelo's
+CHELOS	Chelo's
+THE WARREN GROUP	The Warren Group
+TC1*123 PRINT	123 Print
+AMYS PLACE	Amy's Place
+RESTRANT AMYS	Amy's Place
+DUNKIN	Dunkin Donuts
+GREGG	Gregg's
+ABYSSINIA	Abyssinia
+SEVEN STARS	Seven Stars Bakery
+BLUE STATE COFFEE	Blue State Coffee
+LITTLE FALLS CAFE	Little Falls Cafe
+CHECKSINM	ChecksInTheMail.com
+CHECKS IN THE	ChecksInTheMail.com
+DOTSTER	Dotster, Inc.
+EIG*DOTSTER	Dotster, Inc.
+NAME-CHEAP.COM	NameCheap.com
+DREAMHOS	Dreamhost
+KITCHEN BAR	Kitchen Bar
+XEROX	Xerox
+WWW.NEWEGG.COM	Newegg
+SUBLIMEHQ	SublimeHQ
+NOTARYSUPERSTORE	NotarySuperstore.com
+PANERA BREAD	Panera Bread
+STAPLES	Staples
+COFFEE EXCHA	Coffee Exchange
+BREWED AWA	Brewed Awakenings
+GOURMET HOUSE	Gourmet House
+AS220	AS220
+VERIZON	Verizon
+Providence Water	Providence Water
+FILETAXES.COM	FileTaxes.com
+RHODE ISLAND HOU	RI Housing
+THE AFFINITY GRO	The Affinity Group
+WHOLE FOO	Whole Foods Market
+WHOLEFDS	Whole Foods Market
+APPLE	Apple
+TING-INV	Ting
+MEETUP.COM	Meetup.com
+DWB	Doctors Without Borders
+BGOOD	BGood
+STARBUCKS	Starbucks
+BAKER STREET CAFE	Baker Street Cafe
+BIGGERPOCKETS	Bigger Pockets
+MEETUP.COM	Meetup.com
+VISTAPR	VistaPrint
+500LABELS	500Labels.com
+DOHMEN	Dohmen Capital
+THE GRANGE	The Grange
+Crazy Burger	Crazy Burger
+LEMONGRASS	Lemon Grass
+POCO LOCO	Poco Loco
+BRASS MONKEY	Brass Monkey
+EB CWE RHODE	Center for Women & Enterprise
+RI SEC STATE	RI Secretary of State
+CAFE ZOG	Cafe Zog
+MALACHI'S	Malachi's
+GOOGLE	Google
+TALLULAHS	Tallulah's Taqueria
+SUBWAY	Subway
+JULIANS	Julian's
+THE GREENWOOD INN	The Greenwood Inn
+EMPIRE TEA	Empire Tea & Coffee
+GEOFFS SUPER	Geoff's on Benefit
+NREIG	NREIG Affinity
+BACKBLAZE	Backblaze
+HOPE STREET PIZZA	Hope Street Pizza
+IRS DES:USATAXPYMT	United States Treasury
+KG KITCHEN BAR	KG Kitchen Bar
+LAZ PARKING	LAZ Parking
+MAIN STREET COFFEE	Main Street Coffee
+PACOS TACOS	Paco's Tacos
+SCHASTEA	Schastea
+BLACKDIAMON	Black Diamond REI
+MACRO WATCH	Macro Watch
+FTD COM	Ftd.com
+Gracie's	Gracie's

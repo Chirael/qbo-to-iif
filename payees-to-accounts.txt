@@ -1,11 +1,30 @@
 # These are mappings between payee names and the QuickBooks accounts
-# we want transactions using those payees to get filed under. It
-# assumes that the payee names have been corrected first per the
+# that transactions using those payees should get filed under.
+#
+# It assumes that the payee names have been corrected first per the
 # entries in the payee-fixes.txt file, making these mappings easier.
+#
+# To review all payee names in the QBO file, and see if any need to be
+# added here: egrep '<NAME>' name-of-qbo-file.QBO | sort | uniq | less
+#
+# To review payee names in the IIF file to see which need adding here:
+# cut -f 5 boa-checking-20130101-to-20130622.iif | sort | uniq | less
+#
+# Remember, names in this file often need to be in payee-fixes.txt too
+#
+# USPS - different for different books :( - leave out of this file
+# FileTaxes.com	- same problem
+#
 Webster Bank	Bank Service Charges
+Adler's Hardware	Repairs
+City of Providence	Taxes:Property Taxes
 Home Depot	Repairs
+Wal-Mart	Repairs
 Lowes	Repairs
 Stop & Shop	Repairs
+Roto Rooter	Repairs
+Durfee True Value	Repairs
+PmtUS	Taxes:Property Taxes
 National Grid	Utilities
 Narragansett Bay Commission	Utilities:Sewer
 National Tenant Network	Legal and Professional
@@ -16,3 +35,86 @@ Garrison Trust	Mortgage Interest
 Ferdie's Key Shop	Repairs
 Ocean State Job Lot	Repairs
 Blinds.com	Repairs
+Home Depot	Repairs
+Dal-Tile	Repairs
+TJ Maxx	Repairs
+Quincy Mutual	Insurance
+Chase	Credit Cards:Chase SWA Visa
+UReach Technologies	Technology:Services
+Amazon.com	Technology:Products
+LocatePlus	Technology:Services
+Backblaze	Technology:Services
+OfficeMax	Office Supplies
+TMobile	Telephone
+City Lock	Repairs
+Benny's	Repairs
+Chelo's	Meals and Entertainment:Meals
+The Warren Group	Technology:Services
+123 Print	Advertising
+Hope Street Pizza	Meals and Entertainment:Meals
+Amy's Place	Meals and Entertainment:Meals
+Panera Bread	Meals and Entertainment:Meals
+Dunkin Donuts	Meals and Entertainment:Meals
+Gregg's	Meals and Entertainment:Meals
+Abyssinia	Meals and Entertainment:Meals
+Seven Stars Bakery	Meals and Entertainment:Meals
+ChecksInTheMail.com	Office Supplies
+Dotster, Inc.	Technology:Services
+Dreamhost	Technology:Services
+Kitchen Bar	Meals and Entertainment:Meals
+Xerox	Office Supplies
+Staples	Office Supplies
+Newegg	Technology:Products
+SublimeHQ	Technology:Products
+NotarySuperstore.com	Office Supplies
+Coffee Exchange	Meals and Entertainment:Meals
+Gourmet House	Meals and Entertainment:Meals
+AS220	Meals and Entertainment:Meals
+Verizon	Technology:Services
+Waste Management	Cleaning and Maintenance:Trash Removal
+The Affinity Group	Insurance
+RI Housing	Rental Income
+Whole Foods Market	Meals and Entertainment:Meals
+Apple	Technology:Products
+Ting	Telephone
+Meetup.com	Technology:Services
+Doctors Without Borders	Charity
+Brewed Awakenings	Meals and Entertainment:Meals
+BGood	Meals and Entertainment:Meals
+Starbucks	Meals and Entertainment:Meals
+Baker Street Cafe	Meals and Entertainment:Meals
+Bigger Pockets	Dues and Subscriptions
+Black Diamond REI	Dues and Subscriptions
+Meetup.com	Technology:Services
+NameCheap.com	Technology:Services
+VistaPrint	Postage and Delivery
+500Labels.com	Postage and Delivery
+Dohmen Capital	Dues and Subscriptions
+The Grange	Meals and Entertainment:Meals
+Crazy Burger	Meals and Entertainment:Meals
+Lemon Grass	Meals and Entertainment:Meals
+Poco Loco	Meals and Entertainment:Meals
+Brass Monkey	Meals and Entertainment:Meals
+Center for Women & Enterprise	Training:Classes
+Macro Watch	Training:Classes
+RI Secretary of State	Licenses and Permits
+LAZ Parking	Licenses and Permits
+Cafe Zog	Meals and Entertainment:Meals
+Malachi's	Meals and Entertainment:Meals
+Google	Technology:Services
+Tallulah's Taqueria	Meals and Entertainment:Meals
+Subway	Meals and Entertainment:Meals
+Julian's	Meals and Entertainment:Meals
+The Greenwood Inn	Meals and Entertainment:Meals
+Empire Tea & Coffee	Meals and Entertainment:Meals
+Little Falls Cafe	Meals and Entertainment:Meals
+Geoff's on Benefit	Meals and Entertainment:Meals
+KG Kitchen Bar	Meals and Entertainment:Meals
+Main Street Coffee	Meals and Entertainment:Meals
+NREIG Affinity	Insurance
+United States Treasury	Taxes:Federal
+Paco's Tacos	Meals and Entertainment:Meals
+Schastea	Meals and Entertainment:Meals
+Blue State Coffee	Meals and Entertainment:Meals
+Ftd.com	Gifts
+Gracie's	Gifts

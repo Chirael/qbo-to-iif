@@ -1,11 +1,18 @@
 # Maps transaction types from QBO TRNTYPE to IIF TRNSTYPE
 # Note that these are lower case because the ofxparse library
 # converts the TRNTYPE field contents to lowercase
+# To review all TRNTYPE values in all QBO files:
+# egrep --no-filename -i TRNTYPE *.[Qq][Bb][Oo] | perl -pe 's#^\s+##; s#\s+$#\n#' | sort | uniq
 dep	DEPOSIT
 credit	DEPOSIT
+atm	DEPOSIT
+directdep	DEPOSIT
 pos	CHECK
 check	CHECK
 payment	CHECK
 other	CHECK
 debit	CHECK
 fee	CHECK
+srvchg	CHECK
+directdebit	CHECK
+xfer	TRANSFER

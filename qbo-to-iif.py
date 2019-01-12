@@ -92,15 +92,31 @@ class UnknownTxTypeException(Exception): pass
 # Read in payee name fixes file
 payeefixes = []
 payeesubs = {}
+asteriskre = re.compile('\*')
 for line in map(lambda x: x[:len(x)-1],   # eliminate newlines at end
                 filter(lambda x: noncomre.search(x),
                        (open(payeefixfile, 'r')).readlines())):
     orig, fixed = line.split("\t", 1)
+    orig = asteriskre.sub('\*', orig)
     newre = re.compile('^' + orig + '(?i)')
     payeefixes.append(newre)
     payeesubs[newre] = fixed
 
+# Regexp hack for B of A debit card transactions (remove CHECKCARD 0516)
+checkcardre = re.compile('^CHECKCARD \d{4} ')
+paypalre = re.compile('^PAYPAL \*')
+paypaldesre = re.compile('^PAYPAL DES:INST XFER ID:')
+ppre = re.compile('^PP\*')
+squarere = re.compile ('^SQ \*')
+tstre = re.compile ('^TST\* ')
+
 def fix_payee(payee):
+    payee = checkcardre.sub('', payee)
+    payee = paypaldesre.sub('', payee)
+    payee = paypalre.sub('', payee)
+    payee = ppre.sub('', payee)
+    payee = squarere.sub('', payee)
+    payee = tstre.sub('', payee)
     for matchre in payeefixes:
         if matchre.search(payee): return payeesubs[matchre]
     return payee
